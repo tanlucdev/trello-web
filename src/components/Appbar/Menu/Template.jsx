@@ -37,7 +37,7 @@ function Template() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button-template',
+          'aria-labelledby': 'basic-button-template'
         }}
       >
         <MenuItem>

@@ -37,7 +37,7 @@ function Started() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button-started',
+          'aria-labelledby': 'basic-button-started'
         }}
       >
         <MenuItem>
