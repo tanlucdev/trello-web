@@ -17,8 +17,8 @@ import Tooltip from '@mui/material/Tooltip'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import LibraryAddIcon from '@mui/icons-material/LibraryAdd'
 import InputAdornment from '@mui/material/InputAdornment'
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from '@mui/icons-material/Search'
+import CloseIcon from '@mui/icons-material/Close'
 import { useState } from 'react'
 
 function AppBar() {
@@ -88,7 +88,7 @@ function AppBar() {
             }}
             sx={{
               minWidth: '120px',
-              minWidth: '180px',
+              maxWidth: '180px',
               '& label': { color: 'white' },
               '& input': { color: 'white' },
               '& label.Mui-focused': { color: 'white' },
@@ -102,12 +102,12 @@ function AppBar() {
           />
           <ModeSelect />
           <Tooltip title="Notifications">
-            <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
+            <Badge color="warning" variant="dot" sx={{ cursor: 'pointer' }}>
               <NotificationsNoneIcon sx={{ color: 'white' }} />
             </Badge>
           </Tooltip>
-          <Tooltip title="Help " sx={{ cursor: 'pointer' }}>
-            <HelpOutlineIcon sx={{ color: 'white' }} />
+          <Tooltip title="Help ">
+            <HelpOutlineIcon sx={{ color: 'white', cursor: 'pointer' }} />
           </Tooltip>
           <Profile />
         </Box>
