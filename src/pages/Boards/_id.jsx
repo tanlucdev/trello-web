@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
-import Appbar from '~/components/Appbar'
-import BoardBar from './BoardBar'
-import BoardContent from './BoardContent'
+import Appbar from '~/components/Appbar/AppBar'
+import BoardBar from './BoardBar/BoardBar'
+import BoardContent from './BoardContent/BoardContent'
 
 function Board() {
   return (
