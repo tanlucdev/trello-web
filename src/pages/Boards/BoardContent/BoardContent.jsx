@@ -8,7 +8,8 @@ import {
   useSensor,
   useSensors,
   DragOverlay,
-  defaultDropAnimationSideEffects
+  defaultDropAnimationSideEffects,
+  closestCorners
 } from '@dnd-kit/core'
 import { arrayMove, defaultAnimateLayoutChanges } from '@dnd-kit/sortable'
 import { useState, useEffect } from 'react'
@@ -162,7 +163,10 @@ function BoardContent({ board }) {
 
   return (
     <DndContext
+      // Cảm biến
       sensors={sensors}
+      // Thuật toán phát hiện va chạm
+      collisionDetection={closestCorners}
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
