@@ -21,7 +21,6 @@ import ListCards from './ListCards/ListCards'
 import { mapOrder } from '~/utils/sorts'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { height } from '@mui/system'
 
 function Column({ column }) {
   // Drag and drop
