@@ -35,7 +35,7 @@ function Profile() {
           <Avatar
             sx={{ width: 36, height: 36 }}
             alt="avt"
-            src="https://cdn.chanhtuoi.com/uploads/2022/01/avatar-tet.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWxVA_gCI2Yg0r-FNBPbjTVUagvX91SDKP1cAFARpTQF4IQL6qVatU__Z7piwiuDx8vs&usqp=CAU"
           />
         </IconButton>
       </Tooltip>
