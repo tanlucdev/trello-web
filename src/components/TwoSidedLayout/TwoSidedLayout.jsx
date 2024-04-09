@@ -1,8 +1,8 @@
-import React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-import Container from '@mui/joy/Container';
-import { typographyClasses } from '@mui/joy/Typography';
+import React from 'react'
+import AspectRatio from '@mui/joy/AspectRatio'
+import Box from '@mui/joy/Box'
+import Container from '@mui/joy/Container'
+import { typographyClasses } from '@mui/joy/Typography'
 
 function TwoSidedLayout() {
   return (
@@ -18,11 +18,11 @@ function TwoSidedLayout() {
           gap: 4,
           [theme.breakpoints.up(834)]: {
             flexDirection: 'row',
-            gap: 6,
+            gap: 6
           },
           [theme.breakpoints.up(1199)]: {
-            gap: 12,
-          },
+            gap: 12
+          }
         })}
       >
         <Box
@@ -37,11 +37,11 @@ function TwoSidedLayout() {
             [theme.breakpoints.up(834)]: {
               minWidth: 420,
               alignItems: 'flex-start',
-              textAlign: 'initial',
+              textAlign: 'initial'
             },
             [`& .${typographyClasses.root}`]: {
-              textWrap: 'balance',
-            },
+              textWrap: 'balance'
+            }
           })}
         >
           {/* Content goes here */}
@@ -57,11 +57,11 @@ function TwoSidedLayout() {
               alignSelf: 'initial',
               flexGrow: 1,
               '--AspectRatio-maxHeight': '520px',
-              '--AspectRatio-minHeight': '400px',
+              '--AspectRatio-minHeight': '400px'
             },
             borderRadius: 'sm',
             bgcolor: 'background.level2',
-            flexBasis: '50%',
+            flexBasis: '50%'
           })}
         >
           <img
