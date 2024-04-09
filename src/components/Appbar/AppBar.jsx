@@ -50,6 +50,7 @@ function AppBar() {
               <Started />
               <Template />
               <Button
+                href='/guide'
                 sx={{
                   color: 'white',
                   border: 'none',

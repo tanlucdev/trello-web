@@ -1,6 +1,8 @@
 import Board from '~/pages/Boards/_id'
 import Guide from '~/pages/Single_Page/Guide'
-import { Route, Routes, BrowserRouter } from "react-router-dom"
+import Gen from '~/pages/Single_Page/Gen'
+
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Board />} />
           <Route path="/guide" element={<Guide />} />
+          <Route path="/gen" element={<Gen />} />
         </Routes>
       </BrowserRouter>
     </>
