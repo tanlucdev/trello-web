@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 
-const Text = ({ text, delay, infinite }) => {
+const Text = (props) => {
+  const { text, delay, infinite } = props
+  const fontSize = props.fontSize || '1rem'
+  const lineHeight = props.lineHeight || '1.2'
+
   const [currentText, setCurrentText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [opacity, setOpacity] = useState(0) // Thêm state để theo dõi opacity
-  const [fontWeight, setFontWeight] = useState(400) // Thêm state để theo dõi fontWeight
 
   useEffect(() => {
     let timeout
@@ -14,12 +17,11 @@ const Text = ({ text, delay, infinite }) => {
         setCurrentText(prevText => prevText + text[currentIndex])
         setCurrentIndex(prevIndex => prevIndex + 1)
         setOpacity(1) // Đặt opacity thành 1 khi thêm mỗi từ
-        setFontWeight(900) // Đặt fontWeight thành 700 để làm chữ đậm hơn
       }, delay)
 
     } else if (infinite) {
-      setCurrentIndex(0)
-      setCurrentText('')
+      setCurrentIndex(text.length)
+      setCurrentText(text)
     }
 
     return () => clearTimeout(timeout)
@@ -28,12 +30,12 @@ const Text = ({ text, delay, infinite }) => {
   return (
     <span
       style={{
-        fontSize: '1.5rem',
-        lineHeight: '1.2',
+        fontSize: fontSize,
+        lineHeight: lineHeight,
         letterSpacing: '0.05em',
-        transition: 'opacity 0.5s, font-weight 0.5s', // Thêm transition cho opacity và fontWeight
-        opacity: opacity, // Đặt opacity dựa vào giá trị state
-        fontWeight: fontWeight // Đặt fontWeight dựa vào giá trị state
+        transition: 'opacity 0.5s', // Thêm transition cho opacity và fontWeight
+        opacity: opacity // Đặt opacity dựa vào giá trị state
+        // Đặt fontWeight dựa vào giá trị state
       }}
     >
       {currentText}
