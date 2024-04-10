@@ -1,0 +1,19 @@
+.arlo_tm_arrow_wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  margin-left: -21px;
+  z-index: 55;
+
+  a {
+    text-decoration: none;
+    color: $color_2;
+    font-size: 30px;
+  }
+}
+
+.arlo_tm_arrow_wrap.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
