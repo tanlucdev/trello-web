@@ -1,9 +1,9 @@
 
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown'
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import Grid from '@mui/material/Grid'
 import '~/styles/style.scss'
 
-export default function ArrowDown(props) {
+export default function ArrowUp(props) {
   const id_page = props.id_page
   const handleScrollNext = () => {
 
@@ -15,7 +15,7 @@ export default function ArrowDown(props) {
   return (
     <>
       <Grid
-        sx={{ cursor: 'pointer', textAlign: 'right' }}
+        sx={{ cursor: 'pointer', textAlign: 'left' }}
         item xs={6} sm={6} md={6} lg={6}
       >
         <div
@@ -24,7 +24,7 @@ export default function ArrowDown(props) {
             e.preventDefault()
             handleScrollNext()
           }}>
-            <KeyboardDoubleArrowDownIcon sx={{ width: '30px', height: '30px' }} />
+            <KeyboardDoubleArrowUpIcon sx={{ width: '30px', height: '30px' }} />
           </a>
         </div>
       </Grid>
