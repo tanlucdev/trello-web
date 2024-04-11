@@ -2,13 +2,17 @@ import Grid from '@mui/material/Grid'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Container from '@mui/material/Container'
-import Text from '~/components/Text/Text'
+import Text from '~/components/Part/Text'
 import Lottie from 'lottie-react'
 import guideImage from '~/assets/achieve.json'
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic'
 import BrowseGalleryIcon from '@mui/icons-material/BrowseGallery'
 import CheckBoxIcon from '@mui/icons-material/CheckBox'
 import MessageIcon from '@mui/icons-material/Message'
+import ArrowDown from '~/components/ArrowDown/ArrowDown'
+import ArrowUp from '~/components/ArrowDown/ArrowUp'
+
+import ImagePart from '~/components/Part/ImagePart'
 
 const text = 'With Pomodoro Timer Online, you will achieve your goals by staying focused and painless in the process.'
 const text2 = 'With Background Music,'
@@ -21,7 +25,7 @@ function Achieve() {
   const theme = useTheme()
   const smScreen = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <div id="achieve">
+    <div id="achieve" >
       <Container>
         <Grid container spacing={5} sx={{ height: '100vh' }} >
           <Grid item xs={12} sm={12} md={6} lg={6} marginTop="20%">
@@ -42,20 +46,11 @@ function Achieve() {
               <Text text={text5} delay={100} infinite fontSize="1.5rem" lineHeight="1.5" />
             </div>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6} >
-            <div
-              style={{
-                height: '100%',
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <Lottie style={{ maxHeight: '100%', maxWidth: '100%', backgroundImage: 'none' }} animationData={guideImage} />
-            </div>
-          </Grid>
+          <ImagePart image={guideImage} />
 
+        </Grid>
+        <Grid item spacing={2}>
+          <ArrowDown id_page="whouse" />
         </Grid>
       </Container>
     </div>
