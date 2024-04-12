@@ -5,10 +5,16 @@ import Whouse from '~/pages/Single_Page/WhoUse'
 
 export default function Gen() {
   return (
-    <>
-      <Guide />
-      <Achieve />
-      <Whouse />
-    </>
+    <div style={{ scrollSnapType: 'y mandatory' }}>
+      <section style={{ scrollSnapAlign: 'start' }}>
+        <Guide />
+      </section>
+      <section style={{ scrollSnapAlign: 'start' }}>
+        <Achieve />
+      </section>
+      <section style={{ scrollSnapAlign: 'start' }}>
+        <Whouse />
+      </section>
+    </div>
   )
 }

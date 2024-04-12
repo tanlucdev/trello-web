@@ -22,9 +22,7 @@ function WhoUse() {
   return (
     <div id="whouse">
       <Container>
-        <Grid style={{ marginTop: '20px' }}>
-          <ArrowUp id_page="whouse" />
-        </Grid>
+
         <Grid container spacing={5} sx={{ height: '100vh' }} >
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <div

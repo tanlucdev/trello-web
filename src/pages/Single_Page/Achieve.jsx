@@ -25,9 +25,9 @@ function Achieve() {
   const theme = useTheme()
   const smScreen = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <div id="achieve" >
-      <Container>
-        <Grid container spacing={5} sx={{ height: '100vh' }} >
+    <div id="achieve" style={{ backgroundColor: "#teal" }}>
+      <Container style={{ height: '100vh' }}>
+        <Grid container spacing={5} sx={{ height: '90vh' }} >
           <Grid item xs={12} sm={12} md={6} lg={6} marginTop="20%">
             <div style={{ lineHeight: '2', fontSize: '1rem' }}>
               <Text text={text} delay={0} infinite fontSize="1.5rem" />
@@ -49,8 +49,9 @@ function Achieve() {
           <ImagePart image={guideImage} />
 
         </Grid>
-        <Grid item spacing={2}>
+        <Grid container item spacing={5}>
           <ArrowDown id_page="whouse" />
+          <ArrowUp id_page="guide" />
         </Grid>
       </Container>
     </div>

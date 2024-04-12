@@ -2,6 +2,7 @@ import Board from '~/pages/Boards/_id'
 import Guide from '~/pages/Single_Page/Guide'
 import WhoUse from '~/pages/Single_Page/WhoUse'
 import Achieve from '~/pages/Single_Page/Achieve'
+import Faq from '~/pages/Single_Page/Faq'
 
 import Infomation from '~/pages/Single_Page/Infomation'
 import Appbar from '~/components/Appbar/AppBar'
@@ -19,7 +20,7 @@ function App() {
           <Route path="/information" element={<Infomation />} />
           <Route path="/whouse" element={<WhoUse />} />
           <Route path="/achieve" element={<Achieve />} />
-
+          <Route path="/Faq" element={<Faq />} />
         </Routes>
       </BrowserRouter>
     </>
