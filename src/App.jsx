@@ -6,7 +6,6 @@ import Faq from '~/pages/Single_Page/Faq'
 
 import Infomation from '~/pages/Single_Page/Infomation'
 import Appbar from '~/components/Appbar/AppBar'
-import React, { useState } from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {

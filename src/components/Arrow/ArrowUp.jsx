@@ -1,10 +1,11 @@
 
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp'
 import Grid from '@mui/material/Grid'
 import '~/styles/style.scss'
 
 export default function ArrowUp(props) {
   const id_page = props.id_page
+  const textAlign = props.id_textAlign | 'left'
   const handleScrollNext = () => {
 
     const section = document.querySelector(`#${id_page}`)
@@ -15,7 +16,7 @@ export default function ArrowUp(props) {
   return (
     <>
       <Grid
-        sx={{ cursor: 'pointer', textAlign: 'left' }}
+        sx={{ cursor: 'pointer', textAlign: textAlign }}
         item xs={6} sm={6} md={6} lg={6}
       >
         <div

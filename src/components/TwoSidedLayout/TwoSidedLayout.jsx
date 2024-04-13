@@ -1,4 +1,3 @@
-import React from 'react'
 import AspectRatio from '@mui/joy/AspectRatio'
 import Box from '@mui/joy/Box'
 import Container from '@mui/joy/Container'
