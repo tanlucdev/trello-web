@@ -1,23 +1,24 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import MuiAccordion from '@mui/material/Accordion'
+import MuiAccordionDetails from '@mui/material/AccordionDetails'
+import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import Container from '@mui/material/Container'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import * as React from 'react'
+import ArrowUp from '~/components/Arrow/ArrowUp'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
-    borderBottom: 0,
+    borderBottom: 0
   },
   '&::before': {
-    display: 'none',
-  },
-}));
+    display: 'none'
+  }
+}))
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
@@ -31,31 +32,40 @@ const AccordionSummary = styled((props) => (
       : 'rgba(0, 0, 0, .03)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    transform: 'rotate(90deg)'
   },
   '& .MuiAccordionSummary-content': {
-    marginLeft: theme.spacing(1),
-  },
-}));
+    marginLeft: theme.spacing(1)
+  }
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+  borderTop: '1px solid rgba(0, 0, 0, .125)'
+}))
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState('panel1')
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+    setExpanded(newExpanded ? panel : false)
+  }
 
   return (
-    <div>
+    <div id="faq" style={{ backgroundColor: '#388be9', minHeight: '100vh' }}>
       <Container>
-        <div style={{ margin: '5%' }}>
-          <h1 style={{ textAlign: 'center', fontSize: '3rem' }}>Frequently asked questions</h1>
-          <Accordion style={{ marginTop: '50px', width: '70%', margin: '0 auto' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <div style={{}}>
+          <h1 style={{ textAlign: 'center', fontSize: '3rem', marginTop: '20px' }}>Frequently asked questions</h1>
+          <Accordion
+            style={{
+              marginTop: '50px',
+              width: '70%',
+              margin: '0 auto',
+              borderColor: (theme) => (theme.palette.mode === 'dark' ? '#fff' : 'black')
+            }}
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}
+          >
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography style={{ fontSize: '20px' }}>How to use the Pomodoro Technique?</Typography>
             </AccordionSummary>
@@ -97,7 +107,7 @@ export default function CustomizedAccordions() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p>Yes! For the sake of simplicity, we've tried to keep the basics in addition to these cool features:</p>
+                <p>Yes! For the sake of simplicity, we have tried to keep the basics in addition to these cool features:</p>
                 <ul>
                   <li>Background music with volume control.</li>
                   <li>Default and custom times.</li>
@@ -110,8 +120,15 @@ export default function CustomizedAccordions() {
             </AccordionDetails>
           </Accordion>
         </div>
+
+        <div style={{ textAlign: 'center', marginTop: '30%' }} >
+          <ArrowUp id_page="whouse" />
+
+        </div>
+
+
       </Container>
 
     </div>
-  );
+  )
 }
