@@ -5,7 +5,7 @@
 export const mockData = {
   board: {
     _id: 'board-id-01',
-    title: 'Trello Board',
+    title: 'Pomodoro Board',
     description: 'Pro MERN stack Course',
     type: 'public', // 'private'
     ownerIds: [], // Những users là Admin của board
