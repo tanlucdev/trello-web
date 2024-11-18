@@ -28,7 +28,7 @@ const ACTIVE_DRAG_ITEM_TYPE = {
   CARD: 'ACTIVE_DRAG_ITEM_CARD'
 }
 
-function BoardContent({ board, createNewColumn, createNewCard }) {
+function BoardContent({ board, createNewColumn, createNewCard, moveColumns }) {
   // Di chuyển 10px thì mới kích hoạt event, fix trường hợp gọi event
   const mouseSensor = useSensor(MouseSensor, { activationConstraint: { distance: 10 } })
 
@@ -241,8 +241,9 @@ function BoardContent({ board, createNewColumn, createNewCard }) {
         // Dùng arrayMove của dnnd--kit để sắp xếp lại column ban đầu
         const dndOrderedColumns = arrayMove(orderedColumns, oldColumnIndex, newColumnIndex)
 
+        moveColumns(dndOrderedColumns)
         // Console log dùng xử lý gọi api
-        // const dndOrderedColumnsIds = dndOrderedColumns.map(c => c._id)
+
         setOrderedColumns(dndOrderedColumns)
       }
     }
